@@ -12,6 +12,10 @@ Functions in object properties are not supported.
 
 ### 1.0.1
 
+fix arrow function handling
+
+### 1.0.1
+
 Add extension icon
 
 ### 1.0.0

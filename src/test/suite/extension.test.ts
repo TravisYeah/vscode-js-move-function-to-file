@@ -29,7 +29,7 @@ suite("Extension Test Suite", () => {
     editor.selection = new vscode.Selection(position, position);
 
     await vscode.commands.executeCommand(
-      "react-component-to-file.moveFunctionToFile"
+      "vscode-js-move-function-to-file.moveFunctionToFile"
     );
 
     const expectedFilePath = path.join(

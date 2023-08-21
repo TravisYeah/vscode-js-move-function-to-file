@@ -31,13 +31,19 @@ function getFunctionAtCursor() {
         const funcEnd = node.loc.end.line;
 
         if (position.line + 1 >= funcStart && position.line + 1 <= funcEnd) {
-          const range = new vscode.Range(
-            new vscode.Position(funcStart - 1, node.loc.start.column),
-            new vscode.Position(funcEnd - 1, node.loc.end.column)
+          const funcText = document.getText(
+            new vscode.Range(
+              new vscode.Position(funcStart - 1, node.loc.start.column),
+              new vscode.Position(funcEnd - 1, node.loc.end.column)
+            )
           );
-          const funcText = document.getText(range);
           editor.edit((editBuilder) => {
-            editBuilder.delete(range);
+            editBuilder.delete(
+              new vscode.Range(
+                new vscode.Position(funcStart - 1, 0),
+                new vscode.Position(funcEnd - 1, Infinity)
+              )
+            );
           });
 
           functionInfo = {
