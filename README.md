@@ -10,7 +10,7 @@ Functions in object properties are not supported.
 
 ## Release Notes
 
-### 1.0.1
+### 1.0.2
 
 fix arrow function handling
 
