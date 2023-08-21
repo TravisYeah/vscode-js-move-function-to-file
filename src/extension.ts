@@ -105,9 +105,11 @@ export function activate(context: vscode.ExtensionContext) {
           return;
         }
 
+        const ext = editor.document.fileName.split(".").pop();
+
         const newFilePath = path.join(
           path.dirname(editor.document.uri.fsPath),
-          `${functionName}.jsx`
+          `${functionName}.${ext}`
         );
         fs.writeFileSync(newFilePath, functionDeclaration);
 

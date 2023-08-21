@@ -10,6 +10,10 @@ Functions in object properties are not supported.
 
 ## Release Notes
 
+### 1.0.3
+
+use the source file extension for the created file extension
+
 ### 1.0.2
 
 fix arrow function handling
