@@ -1,8 +1,10 @@
 {
   "name": "vscode-js-move-function-to-file",
+  "publisher": "TravisHarrison",
   "displayName": "Move Function to File",
   "description": "VS Code extension for moving a js/jsx/ts/tsx function to its own file",
-  "version": "1.0.0",
+  "icon": "./images/MoveFunctionToFile.png",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -38,7 +40,8 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "release": "vsce package"
   },
   "devDependencies": {
     "@babel/parser": "^7.22.10",
